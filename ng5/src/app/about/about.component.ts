@@ -38,11 +38,13 @@ export class AboutComponent implements OnInit {
   goalText: string = 'Select .json file from library...';
   goals = ['Skydiving', 'Swimming with Sharks', 'Dancing Naked on Ice'];
   validfile: File;
+  usingDefaults: boolean;
 
   constructor() { }
 
   ngOnInit() {
     this.itemCount = this.goals.length;
+    this.usingDefaults = true;
   }
 
   addItem(){

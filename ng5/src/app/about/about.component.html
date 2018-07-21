@@ -8,11 +8,28 @@
 </div>
 <div class="container color-light" [@goals]="goals.length" >
   <div class="col">
-    <p class="sm">Use this form below to add a new bucket list goal. What do you want to accomplish in your life?</p>
+    <p class="sm">Set a name for your uploaded gearset.</p>
 
+    <input type="text" class="txt" name="name" placeholder="Set name...">
+    <div ng-controller="defaultControls">
+    <form type = "checkbox" ng-model="useDefaultMaleChar">
+      <label for="checkbox">Use a Default body type?</label>
+        <input type="checkbox" name="defaults" ng-model="false" ng-change="usingDefaults = true"><br/>
+        <br>
+      <input ng-hide="usingDefaults" type="radio" />  Male Default Character<br />
+      <input ng-hide="usingDefaults" type="radio" name="female" />  Female Default Character<br />
+    </form>
+
+    <br>
+    <br>
+    <br>
+    
     <form name='fileForm' >
       <input type="file" name="file" accept=".json" onchange=validFile(file)>
   </form>
+  </div>
+  <br>
+
   </div>
   <div class="col">
     <p class="life-container" *ngFor="let goal of goals; let i = index" (click)="removeItem(i)">
