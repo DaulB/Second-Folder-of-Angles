@@ -35,6 +35,7 @@ export class HomeComponent implements OnInit {
   itemCount: number = 4;
   btnText: string = "Add an item";
   goalText: string = 'My first life goal';
+  password: string = '';
   goals = ['Skydiving', 'Swimming with Sharks', 'Dancing Naked on Ice'];
 
   constructor() { }

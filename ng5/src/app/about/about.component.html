@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <div class="container color-dark">
   <div class="col">
     <p>Add a .json appearance file</p>
@@ -9,9 +8,11 @@
 </div>
 <div class="container color-light" [@goals]="goals.length" >
   <div class="col">
-    <p class="sm">Set a name for your uploaded gearset.</p>
-
-    <input type="text" class="txt" name="name" placeholder="Set name...">
+    <p class="sm">Enter your Password</p>
+    <form>
+      <input type="text" class="txt" name="name" placeholder="Set name...">
+      <input type="submit" class="btn" value="Submit" (click)="validPass(name)">
+    </form>
     <div ng-controller="defaultControls">
     <form type = "checkbox" ng-model="useDefaultMaleChar">
       <label for="checkbox">Use a Default body type?</label>
@@ -38,7 +39,3 @@
     </p>
   </div>
 </div>
-=======
-<p>Checking git commits
-</p>
->>>>>>> 32396efc782a7951c4da049751ba195b92d3401f

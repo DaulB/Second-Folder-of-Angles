@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {trigger,style,transition,animate,keyframes,query,stagger} from '@angular/animations';
 import { NgModel } from '@angular/forms';
+//var fs  = require('fs');
 
 @Component({
   selector: 'app-about',
@@ -39,6 +40,7 @@ export class AboutComponent implements OnInit {
   goals = ['Skydiving', 'Swimming with Sharks', 'Dancing Naked on Ice'];
   validfile: File;
   usingDefaults: boolean;
+  passValid : false;
 
   constructor() { }
 
@@ -61,4 +63,49 @@ export class AboutComponent implements OnInit {
     //once the file is uploaded we have to check whether it fits the pattern for War or Tra.
 
   }
+/*
+  validPass(password){
+    //create read file operand.
+    //unsecure but it works.
+    //var userfile = fs.readFileSync("E:\\angular\\second\\ng5\\src\\app\\about\\passwords.txt").toString('utf-8');
+    //var passList = userfile.split('\n');
+
+
+    console.log("Checking a Password.");
+    
+
+    //create an object that can hold both an ID and a Password.
+    class passPair {
+      //a password given by my bot
+      password = "";
+
+      //an id that holds the associated discord ID.
+      id = "";
+    };
+
+    var found = false;
+    //split the passwords into manageable chunks.
+    for(var i = 0; i < passList.length && !found; i++)
+    {
+      var currentPair = passList[i].slice().split(',') ;
+      
+      //If we find the password we're looking for, we can break.
+      if(password == currentPair[1])
+      {
+        found = true;
+      }
+    }
+
+    if(!found)
+    {
+      //do something to indicate incorrect password.
+      return;
+    }
+
+    if(found)
+    {
+
+    }
+
+  }*/
 }
